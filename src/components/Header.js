@@ -1,38 +1,37 @@
-import React from "react";
-import { Navbar, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const Header = () => {
+const HeaderTest = () => {
+  const isSignedIn = false;
   return (
     <Navbar
-      expand="lg" style={{ backgroundColor: "lightblue", height: "80px", padding: "0", position: "fixed",
-      top: "0",
-      left: "0",
-      right: "0",
-      zIndex: "100", }}
-      variant="dark"
+      expand="md"
+      style={{
+        backgroundColor: "#2E8BC0",
+        height: "80px",
+        fontSize: "20px",
+        position: "sticky",
+        top: 0,
+        width: "100%",
+      }}
     >
       <Container>
-        <Navbar.Brand>
-            <div style={{ display: "flex", alignItems: "center" }}>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <h1
-              style={{
-                fontSize: "24px",
-                margin: 0,
-                padding: "0 20px",
-                color: "darkblue",
-                lineHeight: "80px",
-              }}
-            >
-              Time Tracker
-            </h1>
-          </Link>
-          </div>
-        </Navbar.Brand>
+        <Navbar.Brand href="/">Time Tracker</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/sample">Sample</Nav.Link>
+          </Nav>
+          <Nav className="mr-auto">
+            <Nav.Link href={isSignedIn ? "/sign-out" : "/sign-in"}>
+              {isSignedIn ? "Sign Out" : "Sign In"}
+            </Nav.Link>
+            {!isSignedIn ? <Nav.Link href="sign-up">Sign Up</Nav.Link> : null}
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 };
-
-export default Header;
+export default HeaderTest;
