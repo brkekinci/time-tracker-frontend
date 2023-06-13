@@ -21,7 +21,7 @@ const HeaderTest = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/sample">Sample</Nav.Link>
+            <Nav.Link href="/user">Users</Nav.Link>
           </Nav>
           <Nav className="mr-auto">
             <Nav.Link href={isSignedIn ? "/sign-out" : "/sign-in"}>

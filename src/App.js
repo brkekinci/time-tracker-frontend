@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
-import Sample from "./pages/Sample";
+import User from "./pages/User";
 const App = () => {
   return (
     // <div style={{ marginTop: "80px" }}>
@@ -12,7 +12,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route exact path="/" Component={HomePage} />
-        <Route path="/sample" Component={Sample} />
+        <Route path="/user" Component={User} />
       </Routes>
       <Footer />
     </div>

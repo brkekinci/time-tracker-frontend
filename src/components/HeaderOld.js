@@ -29,8 +29,8 @@ const Header = () => {
           <Nav.Link as={Link} to="/" style={{ color: 'darkblue' }}>
             Home
           </Nav.Link>
-          <Nav.Link as={Link} to="/sample" style={{ color: 'darkblue' }}>
-            Sample
+          <Nav.Link as={Link} to="/user" style={{ color: 'darkblue' }}>
+            Users
           </Nav.Link>
         </Nav>
       </Container>
