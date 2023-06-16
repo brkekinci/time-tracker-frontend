@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { Provider } from "react-redux";
 import store from "./store";
+import { injectStore } from "./apis/axios";
 
 const el = document.getElementById("root");
 
@@ -16,3 +17,5 @@ root.render(
     </BrowserRouter>
   </Provider>
 );
+
+injectStore(store);
